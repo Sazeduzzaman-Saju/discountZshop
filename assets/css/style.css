@@ -1,0 +1,312 @@
+/* Title Font */
+@font-face {
+  font-family: "PolySans";
+  src: url("./fonts/PolySans-Median/PolySansMedian.woff2") format("woff2"),
+    url("./fonts/PolySans-Median/PolySansMedian.woff") format("woff"),
+    url("./fonts/PolySans-Median/PolySansMedian.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Normal Font */
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/Poppins/Poppins-Regular.ttf") format("truetype"),
+    url("fonts/Poppins/Poppins-Medium.ttf") format("truetype"),
+    url("fonts/Poppins/Poppins-Light.ttf") format("truetype"),
+    url("fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Root Styles */
+:root {
+  --primary-color: #f15a2d;
+  --secondary-color-one: #f9f9f9;
+  --secondary-color-two: #252525;
+  --secondary-color-three: #808080;
+  --secondary-color-four: #ebebeb;
+  --background-color: #f8f9fa;
+  --text-color: #212529;
+  --base-font: "Poppins";
+  --title-font: "PolySans";
+}
+
+/* CSS Reset */
+/* Scroll */
+body::-webkit-scrollbar {
+  width: 0.3em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+}
+/* Scroll End*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: var(--base-font);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: var(
+    --base-font
+  ); /* Consider removing this line if unnecessary */
+}
+.main-color {
+  color: var(--primary-color);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--title-font);
+  margin: 0;
+}
+p {
+  font-family: var(--base-font);
+  margin: 0;
+}
+.cart-count {
+  position: relative;
+  font-size: 12px;
+  padding: 5px 7px;
+  background-color: var(--primary-color);
+  border-radius: 100%;
+  right: 15px;
+  top: 10px;
+  color: white;
+}
+.category-menu::after {
+  display: none;
+}
+.extrafont {
+  font-family: var(--title-font);
+}
+@media (min-width: 1600px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1500px;
+  }
+}
+@media (min-width: 1800px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1680px;
+  }
+}
+/* Main Style Start */
+/* Header Style Start*/
+.logo-text {
+  color: #252525;
+  font-family: Poppins;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.profile-logo-account {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+}
+.current-location {
+  background-color: var(--primary-color);
+  color: var(--secondary-color-one);
+  width: 50px;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.current-location i {
+  color: var(--secondary-color-one) !important;
+}
+.custom-nav-link {
+  color: #252525;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.custom-nav-link:hover {
+  color: var(--primary-color);
+}
+.hdr-search {
+  position: relative;
+  left: 50px;
+  height: 41px;
+}
+.hdr-search-box {
+  border: 1px solid #ebebeb;
+  border-radius: 37px;
+  background: #ebebeb;
+  padding: 20px 30px 20px;
+}
+.hdr-search-box:focus {
+  border: 1px solid #ebebeb;
+  outline: none;
+  box-shadow: none;
+  border-radius: 37px;
+  background: #ebebeb;
+  padding: 20px 30px 20px;
+}
+.search-action {
+  right: -8px;
+  top: 3px;
+  color: var(--primary-color);
+}
+.search-action:hover i {
+  color: var(--primary-color);
+}
+.bt-common-heart {
+  position: relative;
+  left: 20px;
+}
+.bt-common:hover {
+  color: var(--primary-color);
+}
+.category-menu {
+  border-radius: 5px;
+  background: #ebebeb;
+  width: 118px;
+  height: 38px;
+  margin: auto;
+  text-align: center;
+  flex-shrink: 0;
+}
+.category-menu span {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 7px;
+}
+/* Available Coupon */
+.coupon-title {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.pt-70 {
+  padding-top: 70px;
+}
+.pb-70 {
+  padding-bottom: 70px;
+}
+.coupon-action i {
+  position: relative;
+  right: 45px;
+  padding: 10px 0px 0px 0px;
+}
+.custom-prev,
+.custom-next {
+  background-color: var(--primary-color);
+  border: none;
+  color: var(--secondary-color-four);
+  padding: 3px 7px;
+}
+
+.custom-prev:hover,
+.custom-next:hover {
+  background-color: var(--primary-color); /* Background color on hover */
+}
+.coupons-box {
+  height: 105px;
+}
+.coupons-area {
+  width: 205px;
+}
+.coupon-logo {
+  position: relative;
+  top: 22px;
+  right: -35px;
+}
+.content-area {
+  width: 205px;
+}
+.discount-percentage {
+  color: var(--primary-color);
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: italic;
+}
+.coupon-text {
+  font-size: 12px;
+}
+.available-coupon-slider {
+  position: relative;
+  left: -18px;
+}
+.slick-dotted.slick-slider {
+  margin-bottom: 0px;
+}
+.app-discount-box {
+  background: conic-gradient(
+    from 72deg at 13.41% 78.24%,
+    #ff2b85 0deg,
+    #e8287f 360deg
+  );
+}
+.ct-badge {
+  border-radius: 39px;
+  background: rgba(128, 128, 128, 0.2);
+  color: #808080;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+/* Grab Slider Area Box */
+.grab-custom-prev,
+.grab-custom-next {
+  background-color: var(--primary-color);
+  border: none;
+  color: var(--secondary-color-four);
+  padding: 3px 7px;
+}
+
+.grab-custom-prev:hover,
+.grab-custom-next:hover {
+  background-color: var(--primary-color); /* Background color on hover */
+}
+.grab-tabs{
+  color: var(--secondary-color-two);
+  border: 1px solid #eee !important;
+}
+.grab-tabs.active{
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  border: 1px solid var(--primary-color) !important;
+}
+.grab-discount-items{
+  border: 2px dashed #808080;
+}
+/* Available Coupon End*/
+/* Main Style End */
