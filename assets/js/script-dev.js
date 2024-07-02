@@ -8,7 +8,7 @@ $(document).ready(function () {
 
   $(".available-coupon-slider").slick({
     autoplay: true,
-    slidesToShow: 6,
+    slidesToShow: 5,
     dots: true,
     arrows: false,
   });
@@ -22,7 +22,6 @@ $(document).ready(function () {
   $(".custom-prev").click(function () {
     $(".available-coupon-slider").slick("slickPrev");
   });
-
 
   $(".grab-slider").slick({
     autoplay: true,
@@ -41,6 +40,20 @@ $(document).ready(function () {
     $(".grab-slider").slick("slickPrev");
   });
 });
+
+$(document).ready(function(){
+  $('.slick-slider-product').slick({
+    autoplay: true,
+    slidesToShow: 3,
+    autoplaySpeed: 3000, // Adjust autoplay speed in milliseconds
+    arrows: true,
+    dots: true,
+    prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+    nextArrow: '<button type="button" class="slick-next">Next</button>'
+  });
+});
+
+
 
 // Copy Coupon Code
 $(document).ready(function () {
