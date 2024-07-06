@@ -3,13 +3,15 @@ $(document).ready(function () {
     autoplay: true,
     slidesToShow: 1,
     dots: true,
+    autoplaySpeed: 3000, // Adjust autoplay speed in milliseconds
     arrows: false,
   });
 
   $(".available-coupon-slider").slick({
     autoplay: true,
     slidesToShow: 5,
-    dots: true,
+    dots: false,
+    autoplaySpeed: 3000, // Adjust autoplay speed in milliseconds
     arrows: false,
   });
 
@@ -26,7 +28,8 @@ $(document).ready(function () {
   $(".grab-slider").slick({
     autoplay: true,
     slidesToShow: 1,
-    dots: true,
+    dots: false,
+    autoplaySpeed: 3000, // Adjust autoplay speed in milliseconds
     arrows: false,
   });
 
@@ -39,21 +42,65 @@ $(document).ready(function () {
   $(".grab-custom-prev").click(function () {
     $(".grab-slider").slick("slickPrev");
   });
+
+  $(".deal-slider").slick({
+    autoplay: true,
+    slidesToShow: 1,
+    dots: false,
+    autoplaySpeed: 3000, // Adjust autoplay speed in milliseconds
+    arrows: false,
+  });
+
+  // Custom Next button
+  $(".deal-custom-next").click(function () {
+    $(".deal-slider").slick("slickNext");
+  });
+
+  // Custom Previous button
+  $(".deal-custom-prev").click(function () {
+    $(".deal-slider").slick("slickPrev");
+  });
 });
 
-$(document).ready(function(){
-  $('.slick-slider-product').slick({
+$(document).ready(function () {
+  $(".slick-slider-product").slick({
     autoplay: true,
     slidesToShow: 3,
     autoplaySpeed: 3000, // Adjust autoplay speed in milliseconds
     arrows: true,
-    dots: true,
-    prevArrow: '<button type="button" class="slick-prev">Previous</button>',
-    nextArrow: '<button type="button" class="slick-next">Next</button>'
+    dots: false,
   });
 });
 
+$(document).ready(function () {
+  $(".slick-slider-normal").slick({
+    autoplay: true,
+    slidesToShow: 2,
+    autoplaySpeed: 3000, // Adjust autoplay speed in milliseconds
+    arrows: true,
+    dots: false,
+  });
+});
 
+$(document).ready(function () {
+  $(".slick-slider-partners").slick({
+    autoplay: true,
+    slidesToShow: 11,
+    autoplaySpeed: 3000, // Adjust autoplay speed in milliseconds
+    arrows: true,
+    dots: false,
+  });
+});
+
+$(document).ready(function () {
+  $(".slick-slider-footer-slider").slick({
+    autoplay: true,
+    slidesToShow: 1,
+    autoplaySpeed: 3000, // Adjust autoplay speed in milliseconds
+    arrows: false,
+    dots: true,
+  });
+});
 
 // Copy Coupon Code
 $(document).ready(function () {
@@ -75,4 +122,72 @@ $(document).ready(function () {
     // Show an alert
     alert("Copied the code: " + couponCode);
   });
+});
+
+// Count Down Here
+class CountdownDays {
+  constructor(element, targetDate) {
+    this.element = element;
+    this.targetDate = new Date(targetDate).getTime();
+    this.initialize();
+  }
+
+  initialize() {
+    const day = 1000 * 60 * 60 * 24;
+
+    const x = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = this.targetDate - now;
+
+      this.element.querySelector(".days").innerText = Math.floor(
+        distance / day
+      );
+
+      if (distance < 0) {
+        clearInterval(x);
+      }
+    }, 1000);
+  }
+}
+
+class CountdownHMS {
+  constructor(element, targetDate) {
+    this.element = element;
+    this.targetDate = new Date(targetDate).getTime();
+    this.initialize();
+  }
+
+  initialize() {
+    const second = 1000,
+      minute = second * 60,
+      hour = minute * 60;
+
+    const x = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = this.targetDate - now;
+
+      this.element.querySelector(".hours").innerText = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / hour
+      );
+      this.element.querySelector(".minutes").innerText = Math.floor(
+        (distance % hour) / minute
+      );
+      this.element.querySelector(".seconds").innerText = Math.floor(
+        (distance % minute) / second
+      );
+
+      if (distance < 0) {
+        clearInterval(x);
+      }
+    }, 1000);
+  }
+}
+
+// Usage example:
+document.querySelectorAll(".countdown-days").forEach((element) => {
+  new CountdownDays(element, "2024-09-30");
+});
+
+document.querySelectorAll(".countdown-hms").forEach((element) => {
+  new CountdownHMS(element, "2024-09-30");
 });

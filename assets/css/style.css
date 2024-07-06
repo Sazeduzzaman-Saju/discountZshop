@@ -66,6 +66,9 @@ a {
     --base-font
   ); /* Consider removing this line if unnecessary */
 }
+a:hover {
+  color: var(--primary-color);
+}
 .main-color {
   color: var(--primary-color);
 }
@@ -347,6 +350,14 @@ p {
   border: 1px solid #dee2e6;
   margin-bottom: 0.5rem;
 }
+.slick-slide {
+  margin-right: 5px;
+}
+
+/* Ensure last slide doesn't overflow */
+.slick-list {
+  margin-right: -5px;
+}
 .selected-point {
   background-color: var(--primary-color);
   padding: 15px;
@@ -354,8 +365,11 @@ p {
   margin-bottom: 0.5rem;
 }
 #mapcontainer {
-  width: 1080px;
-  height: 768px;
+  width: 950px;
+  height: 985px;
+  position: relative;
+  left: 10px;
+  bottom: -15px;
 }
 .mapoverlay {
   position: absolute;
@@ -363,11 +377,16 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to bottom right, rgb(241 90 45 / 76%), rgb(0 0 0 / 40%)); /* Overlay color */
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(241 90 45 / 76%),
+    rgb(0 0 0 / 40%)
+  ); /* Overlay color */
 }
 /* Grab By Location End */
 /* Product Slide */
-.slick-next:before, .slick-prev:before{
+.slick-next:before,
+.slick-prev:before {
   color: #dee2e6;
   padding: 10px;
   border-radius: 100%;
@@ -380,4 +399,111 @@ p {
   right: 0px;
 }
 /* Product Slide ENd */
+/* Count down start */
+.countdown-box {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+.countdown-box li {
+  padding: 10px;
+  text-align: center;
+}
+.countdown-box-text {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+.count-items {
+  border-radius: 2px;
+  background: #f2f2f4;
+  width: 45px;
+  height: 30px;
+  flex-shrink: 0;
+
+  color: #252525;
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+/* Count down end */
+.btn-common-one {
+  background-color: var(--primary-color);
+  color: white;
+}
+.btn-common-one:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+.deal-of-the-day {
+  border: 1px solid #e2e2e2 !important;
+  background: #fff;
+}
+.deal-of-the-day-header {
+  height: 79px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.deal-custom-prev,
+.deal-custom-next {
+  background: #f15a2d;
+  border: 0;
+  color: white;
+}
+.search-btn {
+  position: absolute;
+  left: 95.3%;
+  top: 3px;
+  border-radius: 100%;
+  background: #f15a2d;
+  color: white;
+}
+.deal-card {
+  background-color: #ebebeb;
+}
+
+.slick-slider-footer-slider > .slick-dots li button:before {
+  border: 5px solid #ffffff;
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+  line-height: 18px;
+  font-size: 70px;
+  top: -85px;
+  background: #db4444;
+  color: transparent;
+}
+del {
+  color: #727272;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.product-title {
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+}
+.title-divider {
+  background: #ebebeb;
+  width: 138px;
+  height: 1px;
+  display: block;
+  margin: 2px 0px 2px;
+}
+.title-divider-small {
+  background-color: var(--primary-color);
+  width: 53px;
+  height: 2px;
+  display: block;
+  position: relative;
+  top: -3.5px;
+}
 /* Main Style End */
