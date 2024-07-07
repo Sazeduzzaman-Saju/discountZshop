@@ -124,31 +124,6 @@ $(document).ready(function () {
   });
 });
 
-// Count Down Here
-class CountdownDays {
-  constructor(element, targetDate) {
-    this.element = element;
-    this.targetDate = new Date(targetDate).getTime();
-    this.initialize();
-  }
-
-  initialize() {
-    const day = 1000 * 60 * 60 * 24;
-
-    const x = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = this.targetDate - now;
-
-      this.element.querySelector(".days").innerText = Math.floor(
-        distance / day
-      );
-
-      if (distance < 0) {
-        clearInterval(x);
-      }
-    }, 1000);
-  }
-}
 
 class CountdownHMS {
   constructor(element, targetDate) {
@@ -184,10 +159,42 @@ class CountdownHMS {
 }
 
 // Usage example:
-document.querySelectorAll(".countdown-days").forEach((element) => {
-  new CountdownDays(element, "2024-09-30");
-});
 
 document.querySelectorAll(".countdown-hms").forEach((element) => {
   new CountdownHMS(element, "2024-09-30");
+});
+
+
+class CountdownWithDays {
+  constructor(element, targetDate) {
+    this.element = element;
+    this.targetDate = new Date(targetDate).getTime();
+    this.initialize();
+  }
+
+  initialize() {
+    const second = 1000,
+          minute = second * 60,
+          hour = minute * 60,
+          day = hour * 24;
+
+    const x = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = this.targetDate - now;
+
+      this.element.querySelector(".days").innerText = Math.floor(distance / day);
+      this.element.querySelector(".hours").innerText = Math.floor((distance % day) / hour);
+      this.element.querySelector(".minutes").innerText = Math.floor((distance % hour) / minute);
+      this.element.querySelector(".seconds").innerText = Math.floor((distance % minute) / second);
+
+      if (distance < 0) {
+        clearInterval(x);
+      }
+    }, 1000);
+  }
+}
+
+// Usage example:
+document.querySelectorAll('.countdown-with-days').forEach(element => {
+  new CountdownWithDays(element, "2024-09-30");
 });
