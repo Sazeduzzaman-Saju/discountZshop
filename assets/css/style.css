@@ -614,12 +614,12 @@ del {
   padding-right: 15px;
   transition: all 0.5s ease-in-out;
 }
-@media screen and (min-width: 1350px) {
+@media screen and (max-width: 1350px) {
   .responsive-img {
     max-height: 500px !important; /* Adjust the height for smaller screens */
   }
 }
-@media screen and (min-width: 576px) {
+@media screen and (max-width: 576px) {
   .responsive-img {
     max-height: 300px; /* Adjust the height for even smaller screens */
   }
