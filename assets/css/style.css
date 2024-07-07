@@ -563,13 +563,13 @@ del {
   object-fit: cover;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .responsive-img {
     max-height: 500px; /* Adjust the height for smaller screens */
   }
 }
 
-@media (min-width: 576px) {
+@media (max-width: 576px) {
   .responsive-img {
     max-height: 300px; /* Adjust the height for even smaller screens */
   }
@@ -613,5 +613,15 @@ del {
 .product-showcase:hover .btn-3 {
   padding-right: 15px;
   transition: all 0.5s ease-in-out;
+}
+@media screen and (min-width: 1350px) {
+  .responsive-img {
+    max-height: 500px !important; /* Adjust the height for smaller screens */
+  }
+}
+@media screen and (min-width: 576px) {
+  .responsive-img {
+    max-height: 300px; /* Adjust the height for even smaller screens */
+  }
 }
 /* Main Style End */
