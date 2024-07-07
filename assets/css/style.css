@@ -563,13 +563,13 @@ del {
   object-fit: cover;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .responsive-img {
     max-height: 500px; /* Adjust the height for smaller screens */
   }
 }
 
-@media (max-width: 576px) {
+@media (min-width: 576px) {
   .responsive-img {
     max-height: 300px; /* Adjust the height for even smaller screens */
   }
