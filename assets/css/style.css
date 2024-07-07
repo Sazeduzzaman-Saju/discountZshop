@@ -46,6 +46,17 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: var(--primary-color);
 }
+.product-scroll-show::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.product-scroll-show::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.product-scroll-show::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+}
 /* Scroll End*/
 * {
   margin: 0;
@@ -180,7 +191,7 @@ p {
   border: 1px solid #ebebeb;
   border-radius: 37px;
   background: #ebebeb;
-  padding: 20px 30px 20px;
+  padding: 10px 30px 10px;
 }
 .hdr-search-box:focus {
   border: 1px solid #ebebeb;
@@ -190,10 +201,25 @@ p {
   background: #ebebeb;
   padding: 20px 30px 20px;
 }
+.custom-toggle::after {
+  display: none;
+}
+.toggler-menu {
+  z-index: 9999;
+  border-radius: 0;
+  border: 1px solid var(--primary-color);
+  transform: translate(-127px, 35px) !important;
+}
 .search-action {
   right: -8px;
   top: 3px;
-  color: var(--primary-color);
+  /* color: var(--primary-color); */
+}
+.main-category-dropdown {
+  list-style-type: none;
+}
+.main-category-dropdown li {
+  font-size: 13px;
 }
 .search-action:hover i {
   color: var(--primary-color);
@@ -233,6 +259,12 @@ p {
 }
 .pb-70 {
   padding-bottom: 70px;
+}
+.pt-80 {
+  padding-top: 80px;
+}
+.pb-80 {
+  padding-bottom: 80px;
 }
 .coupon-action i {
   position: relative;
@@ -283,9 +315,9 @@ p {
 }
 .app-discount-box {
   background: conic-gradient(
-    from 72deg at 13.41% 78.24%,
-    #ff2b85 0deg,
-    #e8287f 360deg
+    from 88deg at -213.59% 267.24%,
+    #ff2b85 127deg,
+    #e8287f 192deg
   );
 }
 .ct-badge {
@@ -321,8 +353,18 @@ p {
   border: 1px solid var(--primary-color) !important;
 }
 .grab-discount-items {
-  border-radius: 5px;
-  border: 2px dashed #252525;
+  border-radius: 3px;
+  border: 1px dashed #252525;
+}
+.off-rotate {
+  transform: rotate(-90deg);
+  color: #252525;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110.5%; /* 15.47px */
 }
 /* Available Coupon End*/
 /* Promotaion Product Style Start */
@@ -368,8 +410,16 @@ p {
   width: 950px;
   height: 985px;
   position: relative;
-  left: 10px;
+  left: 28px;
   bottom: -15px;
+}
+.flat-offer-img {
+  width: 150px;
+  height: 150px;
+}
+.product-scroll-show {
+  height: 735px;
+  overflow-x: hidden;
 }
 .mapoverlay {
   position: absolute;
@@ -398,6 +448,7 @@ p {
 .slick-next {
   right: 0px;
 }
+
 /* Product Slide ENd */
 /* Count down start */
 .countdown-box {
@@ -455,7 +506,7 @@ p {
 }
 .search-btn {
   position: absolute;
-  left: 95.3%;
+  left: 95.5%;
   top: 3px;
   border-radius: 100%;
   background: #f15a2d;
@@ -473,7 +524,7 @@ p {
   line-height: 18px;
   font-size: 70px;
   top: -85px;
-  background: #db4444;
+  background: var(--primary-color);
   color: transparent;
 }
 del {
@@ -505,5 +556,62 @@ del {
   display: block;
   position: relative;
   top: -3.5px;
+}
+.responsive-img {
+  height: 100%;
+  max-height: 705px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .responsive-img {
+    max-height: 500px; /* Adjust the height for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .responsive-img {
+    max-height: 300px; /* Adjust the height for even smaller screens */
+  }
+}
+.main-category {
+  color: #727272;
+  border-radius: 0;
+}
+.main-category:hover {
+  background: var(--primary-color);
+  border-radius: 0;
+  color: white;
+}
+.navbar-nav .main-category.active,
+.navbar-nav .main-category.show {
+  background: var(--primary-color);
+  border-radius: 0;
+  color: white;
+}
+.divider-title {
+  display: inline-block;
+  position: relative;
+  font-family: var(--title-font);
+}
+
+.divider-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Adjust the position as needed */
+  width: 100%;
+  height: 2px;
+  background-color: red;
+}
+.custom-nav-link.active {
+  color: var(--primary-color) !important;
+}
+.product-showcase {
+  cursor: pointer;
+}
+.product-showcase:hover .btn-3 {
+  padding-right: 15px;
+  transition: all 0.5s ease-in-out;
 }
 /* Main Style End */

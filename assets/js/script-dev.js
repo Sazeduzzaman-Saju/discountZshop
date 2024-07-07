@@ -4,12 +4,12 @@ $(document).ready(function () {
     slidesToShow: 1,
     dots: true,
     autoplaySpeed: 3000, // Adjust autoplay speed in milliseconds
-    arrows: false,
+    arrows: true,
   });
 
   $(".available-coupon-slider").slick({
     autoplay: true,
-    slidesToShow: 5,
+    slidesToShow:4,
     dots: false,
     autoplaySpeed: 3000, // Adjust autoplay speed in milliseconds
     arrows: false,
