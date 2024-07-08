@@ -799,7 +799,7 @@ del {
 }
 /* Main Style End */
 
-@media (min-width: 1366px) {
+@media (max-width: 1366px) {
   .responsive-img {
     height: 100%;
     max-height: 500px;
@@ -808,16 +808,16 @@ del {
   .grab-offer-tabs-box {
     height: 365px;
     overflow: auto;
-}
-.middle-banner{
-  height: 620px;
-}
-.flat-offer-img {
-  width: 120px;
-  height: 120px;
-}
-.product-scroll-show {
-  height: 798px;
-  overflow-x: hidden;
-}
+  }
+  .middle-banner {
+    height: 620px;
+  }
+  .flat-offer-img {
+    width: 120px;
+    height: 120px;
+  }
+  .product-scroll-show {
+    height: 798px;
+    overflow-x: hidden;
+  }
 }
