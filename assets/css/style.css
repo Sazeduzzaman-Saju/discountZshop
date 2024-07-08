@@ -68,6 +68,17 @@ body::-webkit-scrollbar-thumb {
 #mapsidebar::-webkit-scrollbar-thumb {
   background-color: var(--primary-color);
 }
+.grab-offer-tabs-box::-webkit-scrollbar {
+  width: 0.2em;
+}
+
+.grab-offer-tabs-box::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.grab-offer-tabs-box::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+}
 /* Scroll End*/
 * {
   margin: 0;
@@ -108,6 +119,7 @@ p {
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
+  margin-bottom:0 ;
   font-weight: 400;
 }
 .cart-count {
@@ -321,10 +333,10 @@ p {
 .coupon-text {
   font-size: 12px;
 }
-.available-coupon-slider {
+/* .available-coupon-slider {
   position: relative;
   left: -18px;
-}
+} */
 .slick-dotted.slick-slider {
   margin-bottom: 0px;
 }
@@ -368,10 +380,6 @@ p {
   color: white !important;
   border: 1px solid var(--primary-color) !important;
 }
-.grab-discount-items {
-  border-radius: 3px;
-  border: 1px dashed #252525;
-}
 .off-rotate {
   transform: rotate(-90deg);
   color: #252525;
@@ -395,9 +403,7 @@ p {
   line-height: 50px; /* 125% */
   letter-spacing: 0.2px;
 }
-.promotion-container div p {
-  padding-bottom: 62px;
-}
+
 /* Promotaion Product Style End */
 /* Grab By Location */
 #pointName {
@@ -409,7 +415,7 @@ p {
   margin-bottom: 0.5rem;
   text-align: center;
 }
-#mapsidebar{
+#mapsidebar {
   height: 690px;
   overflow: auto;
 }
@@ -429,10 +435,10 @@ p {
 }
 #mapcontainer {
   width: 970px;
-  height: 685px;
+  height: 615px;
   position: relative;
-  left: 15px;
-  bottom: 0px;
+  left: 5px;
+  bottom: -24px;
 }
 .flat-offer-img {
   width: 150px;
@@ -536,10 +542,77 @@ p {
 .deal-card {
   background-color: #ebebeb;
 }
-.get-up {
-  font-size: 12px;
+.grab-items {
+  display: flex !important;
+}
+.coupon-box {
+  background-image: url("../img/border.png");
+  background-size: cover; /* Scale the image to cover the container */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  width: 100%; /* Make the width responsive */
+  padding-bottom: 41.87%; /* Maintain the aspect ratio (height / width * 100%) */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.coupon-box-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+}
+
+.coupon-box img {
+  max-width: 100%; /* Ensure the images inside are responsive */
+  height: auto;
+}
+
+.coupon-box-content p {
+  margin: 0;
+  color: #252525;
+}
+
+.coupon-box-content h1 {
+  color: #252525;
+  text-align: center;
+  font-family: "Bebas Neue";
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110.5%;
+}
+.coupon-off {
+  transform: rotate(-90deg);
+  position: relative;
+  left: 15px;
+}
+.coupon-content {
+  background: white;
+  padding: 12px;
+}
+.grab-offer-tabs-box {
+  height: 420px;
+  overflow: auto;
+}
+.grab-card {
+  border: 1px solid #ebebeb;
+  background: #f9f9f9;
+}
+.nav-link:focus, .nav-link:hover {
+  color: var(--primary-color);
+}
+.get-up {
+  font-size: 12px;
+  text-align: center;
+}
 .slick-slider-footer-slider > .slick-dots li button:before {
   border-radius: 100%;
   width: 14px;
