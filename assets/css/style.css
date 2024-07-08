@@ -176,7 +176,12 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.8); /* semi-transparent white background */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* semi-transparent white background */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -793,3 +798,15 @@ del {
   }
 }
 /* Main Style End */
+
+@media (min-width: 1366px) {
+  .responsive-img {
+    height: 100%;
+    max-height: 500px;
+    object-fit: cover;
+  }
+  .grab-offer-tabs-box {
+    height: 365px;
+    overflow: auto;
+}
+}
