@@ -816,4 +816,8 @@ del {
   width: 120px;
   height: 120px;
 }
+.product-scroll-show {
+  height: 798px;
+  overflow-x: hidden;
+}
 }
