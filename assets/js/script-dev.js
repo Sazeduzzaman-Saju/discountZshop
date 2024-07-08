@@ -4,7 +4,7 @@ $(document).ready(function () {
     slidesToShow: 1,
     dots: true,
     autoplaySpeed: 3000, // Adjust autoplay speed in milliseconds
-    arrows: true,
+    arrows: false,
   });
 
   $(".available-coupon-slider").slick({
@@ -87,7 +87,7 @@ $(document).ready(function () {
     autoplay: true,
     slidesToShow: 11,
     autoplaySpeed: 3000, // Adjust autoplay speed in milliseconds
-    arrows: true,
+    arrows: false,
     dots: false,
   });
 });
