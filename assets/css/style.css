@@ -812,4 +812,8 @@ del {
 .middle-banner{
   height: 620px;
 }
+.flat-offer-img {
+  width: 120px;
+  height: 120px;
+}
 }
