@@ -809,4 +809,7 @@ del {
     height: 365px;
     overflow: auto;
 }
+.middle-banner{
+  height: 620px;
+}
 }
