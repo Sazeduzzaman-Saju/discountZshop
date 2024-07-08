@@ -105,13 +105,10 @@ h6 {
 }
 p {
   color: #808080;
-  text-align: center;
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px; /* 142.857% */
-  letter-spacing: 0.2px;
 }
 .cart-count {
   position: relative;
@@ -364,7 +361,7 @@ p {
 .grab-tabs {
   color: var(--secondary-color-two);
   border: 1px solid #eee !important;
-  padding: 10px;
+  padding: 9px;
 }
 .grab-tabs.active {
   background-color: var(--primary-color) !important;
