@@ -52,13 +52,13 @@ $(document).ready(function () {
     $(".grab-slider").slick("slickPrev");
   });
 
-  $(".deal-slider").slick({
-    autoplay: true,
-    slidesToShow: 1,
-    dots: false,
-    autoplaySpeed: 3000, // Adjust autoplay speed in milliseconds
-    arrows: false,
-  });
+  // $(".deal-slider").slick({
+  //   autoplay: true,
+  //   slidesToShow: 1,
+  //   dots: false,
+  //   autoplaySpeed: 3000, // Adjust autoplay speed in milliseconds
+  //   arrows: false,
+  // });
 
   // Custom Next button
   $(".deal-custom-next").click(function () {
