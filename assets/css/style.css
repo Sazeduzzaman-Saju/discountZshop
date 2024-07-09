@@ -10,15 +10,7 @@
 }
 
 /* Normal Font */
-@font-face {
-  font-family: "Poppins";
-  src: url("fonts/Poppins/Poppins-Regular.ttf") format("truetype"),
-    url("fonts/Poppins/Poppins-Medium.ttf") format("truetype"),
-    url("fonts/Poppins/Poppins-Light.ttf") format("truetype"),
-    url("fonts/Poppins/Poppins-Bold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* Root Styles */
 :root {
@@ -47,18 +39,21 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--primary-color);
 }
 .product-scroll-show::-webkit-scrollbar {
-  width: 0.5em;
+  width: 0.2em;
 }
 
 .product-scroll-show::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
+.slick-prev {
+  left: -18px;
+}
 
 .product-scroll-show::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color);
+  background-color: #969595;
 }
 #mapsidebar::-webkit-scrollbar {
-  width: 0.5em;
+  width: 0.2em;
 }
 
 #mapsidebar::-webkit-scrollbar-track {
@@ -66,7 +61,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #mapsidebar::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color);
+  background-color: #969595;
 }
 .grab-offer-tabs-box::-webkit-scrollbar {
   width: 0.2em;
@@ -77,7 +72,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .grab-offer-tabs-box::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color);
+  background-color: #969595;
 }
 /* Scroll End*/
 * {
@@ -124,13 +119,14 @@ p {
 }
 .cart-count {
   position: relative;
-  font-size: 12px;
-  padding: 5px 7px;
+  font-size: 10px;
+  padding: 3px 5px;
   background-color: var(--primary-color);
   border-radius: 100%;
-  right: 15px;
-  top: 10px;
+  right: 20px;
+  top: -2px;
   color: white;
+  font-weight: 700;
 }
 .category-menu::after {
   display: none;
@@ -191,6 +187,9 @@ p {
   height: 500px;
 }
 /* Header Style Start*/
+.user-name {
+  font-weight: 500;
+}
 .logo-text {
   color: #252525;
   font-family: Poppins;
@@ -236,8 +235,9 @@ p {
 .hdr-search-box {
   border: 1px solid #ebebeb;
   border-radius: 37px;
-  background: #ebebeb;
+  background: #efefef;
   padding: 10px 30px 10px;
+  color: #f1f1f1c4;
 }
 .hdr-search-box:focus {
   border: 1px solid #ebebeb;
@@ -253,12 +253,15 @@ p {
 .toggler-menu {
   z-index: 9999;
   border-radius: 0;
-  border: 1px solid var(--primary-color);
   transform: translate(-127px, 35px) !important;
 }
+.form-control-sm {
+  padding: 0.25rem 1rem;
+}
 .search-action {
-  right: -8px;
-  top: 3px;
+  right: -2px;
+  top: 0px;
+  font-size: 18px;
   /* color: var(--primary-color); */
 }
 .main-category-dropdown {
@@ -315,7 +318,7 @@ p {
 .coupon-action i {
   position: relative;
   right: 45px;
-  padding: 10px 0px 0px 0px;
+  padding: 5px 0px 0px 5px;
 }
 .custom-prev,
 .custom-next {
@@ -367,6 +370,15 @@ p {
     #ff2b85 127deg,
     #e8287f 192deg
   );
+}
+.brand-products-img {
+  width: 240px;
+  height: 240px;
+  object-fit: fill;
+}
+.brand-home-img {
+  padding-top: 47.5px !important;
+  padding-bottom: 47.5px !important;
 }
 .ct-badge {
   border-radius: 39px;
@@ -494,7 +506,7 @@ p {
   height: 150px;
 }
 .product-scroll-show {
-  height: 780px;
+  height: 783px;
   overflow-x: hidden;
 }
 .mapoverlay {
@@ -517,7 +529,7 @@ p {
   justify-content: center;
 }
 .countdown-box li {
-  padding: 10px;
+  padding: 4px;
   text-align: center;
 }
 .countdown-box-text {
@@ -528,7 +540,7 @@ p {
 .count-items {
   border-radius: 2px;
   background: #f2f2f4;
-  width: 35px;
+  width: 36px;
   height: 35px;
   flex-shrink: 0;
   color: #252525;
@@ -570,8 +582,8 @@ p {
   left: 95.5%;
   top: 3px;
   border-radius: 100%;
-  background: #f15a2d;
-  color: white;
+  /* background: #f15a2d; */
+  color: #808080;
 }
 .deal-card {
   background-color: #ebebeb;
@@ -605,10 +617,20 @@ p {
 }
 
 .coupon-box img {
-  max-width: 100%; /* Ensure the images inside are responsive */
+  max-width: 100%;
   height: auto;
+  position: relative;
+  left: 12px;
 }
-
+.coupon-extra {
+  font-size: 15px;
+  position: relative;
+  left: 3px;
+  top: -4px;
+}
+.para-font {
+  font-weight: 500;
+}
 .coupon-box-content p {
   margin: 0;
   color: #252525;
@@ -618,15 +640,17 @@ p {
   color: #252525;
   text-align: center;
   font-family: "Bebas Neue";
-  font-size: 45px;
+  font-size: 46px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 110.5%;
 }
 .coupon-off {
   transform: rotate(-90deg);
   position: relative;
-  left: 15px;
+  left: 0px;
+  font-size: 20px;
+  top: -2px;
 }
 .coupon-content {
   background: white;
@@ -712,7 +736,7 @@ del {
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 24px; /* 171.429% */
 }
 .title-divider {

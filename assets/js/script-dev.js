@@ -11,8 +11,9 @@ $(document).ready(function () {
     autoplay: true,
     slidesToShow: 1,
     dots: true,
-    autoplaySpeed: 3000, // Adjust autoplay speed in milliseconds
+    autoplaySpeed: 2000, // Adjust autoplay speed in milliseconds
     arrows: false,
+    fade: true // Enable fade effect
   });
 
   $(".available-coupon-slider").slick({
@@ -93,10 +94,14 @@ $(document).ready(function () {
 $(document).ready(function () {
   $(".slick-slider-partners").slick({
     autoplay: true,
-    slidesToShow: 11,
-    autoplaySpeed: 3000, // Adjust autoplay speed in milliseconds
+    autoplaySpeed: 0,
+    speed: 3000,
     arrows: false,
-    dots: false,
+    swipe: false,
+    slidesToShow: 11,
+    cssEase: 'linear',
+    pauseOnFocus: false,
+    pauseOnHover: false,
   });
 });
 
@@ -107,6 +112,7 @@ $(document).ready(function () {
     autoplaySpeed: 3000, // Adjust autoplay speed in milliseconds
     arrows: false,
     dots: true,
+    fade: true,
   });
 });
 
