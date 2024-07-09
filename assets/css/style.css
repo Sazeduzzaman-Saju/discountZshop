@@ -612,10 +612,15 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
+  background: #e1e1e145;
 }
 
+::placeholder {
+  color: #cbcbcb !important;
+  opacity: 0.5; /* Firefox */
+}
 .coupon-box img {
   max-width: 100%;
   height: auto;
