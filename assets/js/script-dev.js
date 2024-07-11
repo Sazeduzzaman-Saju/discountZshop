@@ -59,6 +59,14 @@ $(document).ready(function () {
     autoplaySpeed: 3000, // Adjust autoplay speed in milliseconds
     arrows: false,
   });
+  $(".store-hero-slider").slick({
+    autoplay: true,
+    slidesToShow: 1,
+    dots: true,
+    autoplaySpeed: 3000, // Adjust autoplay speed in milliseconds
+    arrows: false,
+  });
+
 
   // Custom Next button
   $(".deal-custom-next").click(function () {
@@ -100,6 +108,32 @@ $(document).ready(function () {
     swipe: false,
     slidesToShow: 11,
     cssEase: 'linear',
+    pauseOnFocus: false,
+    pauseOnHover: false,
+  });
+});
+$(document).ready(function () {
+  $(".store-offers").slick({
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 3000,
+    arrows: true,
+    swipe: false,
+    slidesToShow: 4,
+    // cssEase: 'linear',
+    pauseOnFocus: false,
+    pauseOnHover: false,
+  });
+});
+$(document).ready(function () {
+  $(".store-popular-offer").slick({
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 3000,
+    arrows: true,
+    swipe: false,
+    slidesToShow: 4,
+    // cssEase: 'linear',
     pauseOnFocus: false,
     pauseOnHover: false,
   });
@@ -211,4 +245,27 @@ class CountdownWithDays {
 // Usage example:
 document.querySelectorAll('.countdown-with-days').forEach(element => {
   new CountdownWithDays(element, "2024-09-30");
+});
+
+(function() {
+  const heart = document.getElementById('heart');
+  heart.addEventListener('click', function() {
+    heart.classList.toggle('red');
+  });
+})();
+
+// id call
+
+document.querySelectorAll('.store-single li').forEach(item => {
+  item.addEventListener('click', function() {
+      // Remove active class from all items
+      document.querySelectorAll('.store-single li').forEach(li => {
+          li.classList.remove('active');
+      });
+      // Add active class to clicked item
+      this.classList.add('active');
+      // Scroll to the corresponding section
+      const targetId = this.getAttribute('data-target');
+      document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+  });
 });
