@@ -56,14 +56,16 @@ $(document).ready(function () {
     autoplay: true,
     slidesToShow: 1,
     dots: false,
-    autoplaySpeed: 3000, // Adjust autoplay speed in milliseconds
+    autoplaySpeed: 3000, 
     arrows: false,
   });
+
+
   $(".store-hero-slider").slick({
     autoplay: true,
     slidesToShow: 1,
     dots: true,
-    autoplaySpeed: 3000, // Adjust autoplay speed in milliseconds
+    autoplaySpeed: 3000, 
     arrows: false,
   });
 
