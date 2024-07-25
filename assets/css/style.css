@@ -599,6 +599,41 @@ p {
   background-color: var(--primary-color);
   color: white;
 }
+.btn-common-three {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #eee;
+  color: var(--primary-color);
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.btn-common-three::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%; /* Start position off-screen to the left */
+  width: 100%;
+  height: 100%;
+  background: rgba(228, 105, 4, 0.2); /* Shadow-like effect */
+  z-index: 1;
+  transition: left 0.5s ease;
+}
+
+.btn-common-three:hover::before {
+  left: 100%; /* End position off-screen to the right */
+}
+
+.btn-common-three:hover {
+  background-color: #eee;
+  color: var(--primary-color);
+}
+
+
+
 .deal-of-the-day {
   border: 1px solid #e2e2e2 !important;
   background: #fff;
@@ -922,7 +957,7 @@ del {
 }
 .store-rating {
   position: relative;
-  top: -15px;
+  top: -22px;
 }
 .store-devider {
   position: relative;
@@ -934,6 +969,144 @@ del {
 }
 .store-rating span {
   background-color: var(--primary-color);
+}
+::selection {
+  color: #fff;
+  background: #664aff;
+}
+
+.wrapper-store {
+  max-width: 450px;
+}
+
+.wrapper-store .search-input-store {
+  background: #fff;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+}
+
+.search-input-store input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 14px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+.search-input-store.active input {
+  border-radius: 5px 5px 0 0;
+}
+
+.search-input-store .autocom-box {
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.search-input-store.active .autocom-box {
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.autocom-box li {
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+  transition: all 0.3s;
+  user-select: none;
+}
+
+.search-input-store.active .autocom-box li {
+  display: block;
+}
+
+.autocom-box li:hover {
+  background: #efefef;
+  cursor: pointer;
+}
+.btn-close {
+  --bs-btn-close-color: #fff; /* Corrected from #ffff to #fff */
+  --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+}
+/* Remove focus styles */
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove active styles */
+input:active,
+textarea:active,
+select:active,
+button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.form-control{
+  background-color: #eeeeee4f;
+  border-radius: 0;
+  border: 1px solid #eeeeee4f;;
+}
+/* Optionally, remove hover styles if needed */
+input:hover,
+textarea:hover,
+select:hover,
+button:hover {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.contact-icons{
+  width: 80px;
+  text-align: center;
+}
+.form-control:focus {
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  border-color: #f15a2d;}
+
+.search-input-store .icon {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  line-height: 45px;
+  font-size: 20px;
+  color: var(--secondary-color-one);
+  background-color: var(--primary-color);
+  cursor: pointer;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 1px solid var(--primary-color);
+}
+
+.styleResault-store {
+  display: none;
+  transition: all 1s;
+  font-size: large;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 8px;
+  font-weight: bolder;
+  text-align: center;
+}
+.styleResault-store:hover {
+  transform: scale(110%);
 }
 .banner-content {
   position: relative;
@@ -1138,7 +1311,7 @@ html {
   border: 1px solid #efefef;
 }
 .slick-dots li.slick-active button:before {
-  opacity: .75;
+  opacity: 0.75;
   color: #f15a2d;
 }
 .slick-dots li button:before {
