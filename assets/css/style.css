@@ -140,6 +140,9 @@ p {
 .extrafont {
   font-family: var(--title-font);
 }
+.special-font-box {
+  font-family: "Bebas Neue";
+}
 .special-font {
   color: #252525;
   text-align: center;
@@ -632,8 +635,6 @@ p {
   color: var(--primary-color);
 }
 
-
-
 .deal-of-the-day {
   border: 1px solid #e2e2e2 !important;
   background: #fff;
@@ -961,7 +962,7 @@ del {
 }
 .store-devider {
   position: relative;
-  top: 5px;
+  top: 0px;
   height: 2px;
   width: 50px;
   background-color: var(--primary-color);
@@ -1056,10 +1057,10 @@ button:active {
   outline: none !important;
   box-shadow: none !important;
 }
-.form-control{
+.form-control {
   background-color: #eeeeee4f;
   border-radius: 0;
-  border: 1px solid #eeeeee4f;;
+  border: 1px solid #eeeeee4f;
 }
 /* Optionally, remove hover styles if needed */
 input:hover,
@@ -1069,15 +1070,77 @@ button:hover {
   outline: none !important;
   box-shadow: none !important;
 }
-.contact-icons{
+.contact-icons {
   width: 80px;
   text-align: center;
 }
 .form-control:focus {
   color: var(--bs-body-color);
   background-color: var(--bs-body-bg);
-  border-color: #f15a2d;}
+  border-color: #f15a2d;
+}
+.custom-offer-tabs {
+  color: #a6a6a6;
+  border-bottom: 1px solid #dfdfdf !important;
+  padding: 16px;
+}
+.nav-tabs .nav-item.show .custom-offer-tabs,
+.nav-tabs .custom-offer-tabs {
+  border-bottom: 1px solid white;
+  padding: 16px;
+}
+.nav-tabs .nav-item.show .custom-offer-tabs,
+.nav-tabs .custom-offer-tabs.active {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 16px;
+  color: #f15a2d !important;
+}
+.nav-tabs .nav-item.show .custom-offer-tabs,
+.nav-tabs .custom-offer-tabs.active span {
+  color: #f15a2d !important;
+}
+.store-tags {
+  position: relative;
+  left: 32px;
+  top: -10px;
+  transform: rotate(46deg);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  width: 65px;
+  height: 30px;
+  background: #f15a2d;
+  text-align: center !important;
+}
+.overlay-card {
+  position: relative;
+  overflow: hidden; /* Ensure the overlay is contained within the card */
+  background-size: cover;
+  background-position: center;
+  border: 0;
+  border-radius: 0;
+  color: #fff;
+}
 
+.overlay-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(241 90 45 / 71%);
+  z-index: 1;
+}
+
+.overlay-card .card-body {
+  position: relative;
+  z-index: 2; /* Ensure the content is above the overlay */
+}
+.store-tags span {
+  position: relative;
+  top: 10px;
+  left: 2px;
+}
 .search-input-store .icon {
   position: absolute;
   right: 0px;
@@ -1290,6 +1353,74 @@ html {
 .store-about li {
   font-size: 14px;
   color: var(--secondary-color-three);
+}
+
+.fixed-background {
+  position: relative; /* Ensure the overlay is positioned relative to this section */
+  background-image: url('https://htmlbeans.com/html/coupon/images/img39.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 350px; /* Adjust height as needed */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fixed-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Change color and opacity as needed */
+  z-index: 1; /* Ensure overlay is above the background but below content */
+}
+
+.fixed-background .container {
+  position: relative; /* Ensure content is above the overlay */
+  z-index: 2;
+}
+.offers-icons {
+  background-color: var(--primary-color);
+  width: 50px;
+  margin: auto;
+  padding: 10px;
+  color: white;
+  border-radius: 100%;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+#counter {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0px;
+  width: 100%;
+      font-size: 20px;
+}
+#counter .item {
+  background: #fff;
+  width: 200px;
+  padding: 35px 40px;
+  margin: 10px;
+  text-align: center;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 0.34);
+  -moz-box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 0.34);
+  box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 0.34);
+}
+#counter .item .count {
+  color: var(--primary-color);
+  margin-bottom: 5px;
+  font-size: 40px;
+}
+#counter .item h3 {
+  color: #4f4e28;
+  text-transform: capitalize;
 }
 /* Faq Page Style End */
 /* .map-store {
