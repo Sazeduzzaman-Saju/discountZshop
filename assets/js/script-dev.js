@@ -130,7 +130,7 @@ $(document).ready(function () {
     autoplay: true,
     autoplaySpeed: 0,
     speed: 3000,
-    arrows: true,
+    arrows: false,
     swipe: false,
     slidesToShow: 4,
     // cssEase: 'linear',
